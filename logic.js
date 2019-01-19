@@ -22,6 +22,7 @@ $(document).ready(function () {
         var empRole = $("#roleIn");
         var empStart = $("#startIn");
         var empRate = $("#rateIn");
+        
 
         var newEmp = {
             name: empName.val(),
@@ -39,6 +40,12 @@ $(document).ready(function () {
     });
 
     db.on('child_added', function (childSnapshot) {
+        var today = new Date()
+        var a = moment(today);
+        var b = moment(dateConvert(childSnapshot.val().start));
+        var difference = a.diff(b,'months');
+        var billing = difference*childSnapshot.val().rate;
+
         var newRow =
             `
             <tr>
@@ -46,9 +53,9 @@ $(document).ready(function () {
                 <td> ` + childSnapshot.val().name + ` </td>
                 <td> ` + childSnapshot.val().role + ` </td>
                 <td> ` + childSnapshot.val().start + ` </td>
-                <td> missing Data </td>
+                <td> ` + difference + ` </td>
                 <td> ` + childSnapshot.val().rate + ` </td>
-                <td> missing Data </td>
+                <td> ` + billing + ` </td>
             </tr>
         `
         $('#topRow').append(newRow);
@@ -57,3 +64,11 @@ $(document).ready(function () {
         console.log('Error: ' + errorObject);
     });
 });
+
+
+  function dateConvert(startDate){
+    var array = startDate.split('/');
+   return new Date(array[2], array[1]-1, array[0]);
+
+  }
+ 
