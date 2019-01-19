@@ -15,7 +15,7 @@ $(document).ready(function () {
     var db = firebase.database().ref();
 
 
-    $('#submitEmployee').on('click', function (event) {
+    $('#submit').on('click', function (event) {
         event.preventDefault();
 
         var empName = $("#nameIn");
