@@ -38,16 +38,16 @@ $(document).ready(function () {
         empRate.val('');
     });
 
-    db.on('value', function (snapshot) {
+    db.on('child_added', function (childSnapshot) {
         var newRow =
             `
             <tr>
                 <th> ` + rowNumber + ` </th>
-                < td > ` + snapshot.val().name + ` < /td>
-                < td > ` + snapshot.val().role + ` < /td>
-                < td > ` + snapshot.val().start + ` < /td>
+                <td> ` + childSnapshot.val().name + ` </td>
+                <td> ` + childSnapshot.val().role + ` </td>
+                <td> ` + childSnapshot.val().start + ` </td>
                 <td> missing Data </td>
-                < td > ` + snapshot.val().rate + ` < /td>
+                <td> ` + childSnapshot.val().rate + ` </td>
                 <td> missing Data </td>
             </tr>
         `
