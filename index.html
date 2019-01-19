@@ -16,7 +16,7 @@
 
 </head>
 <body>
-    <div class='container' style='width:"80%" ; margin:"auto" '>
+    <div class='container' style='width:"70%" ; margin:"auto" '>
         
         <div class="container" style='background-color: black; border-radius: 5px; padding: 15px 25px 15px 25px'>
             <h3 class="display-4" style='color:white'>Employee Data Management</h3>
@@ -48,39 +48,42 @@
                 <td>@mdo</td>
                 <td>Mark</td>
                 <td>Otto</td>
-                <td>@mdo</td>
+                <td>10000</td>
               </tr>
           
             </tbody>
           </table>          
         </div>
 
-
+      <div class="card" style="width: 100%; margin: 15px 0px;">
+          <div class="card-header">
+            Enter employee information
+          </div>
     
-      <form>
+      <form style='padding:20px'>
             <div class="form-group">
               <label for="employeeName">Employee Name</label>
-              <input type="name" class="form-control" id="exampleName" aria-describedby="nameHelp" placeholder="Jane Doe">
+              <input type="name" class="form-control" id="nameIn" aria-describedby="nameHelp" placeholder="Jane Doe">
             </div>
 
             <div class="form-group">
               <label for="exampleInputRole">Role</label>
-              <input type="role" class="form-control" id="exampleInputRole" placeholder="CEO">
+              <input type="role" class="form-control" id="roleIn" placeholder="CEO">
             </div>
             
             <div class="form-group">
                 <label for="exampleInputStartDate">Start Date (MM/DD/YYYY)</label>
-                <input type="role" class="form-control" id="exampleInputStartDate" placeholder="01/08/1989">
+                <input type="role" class="form-control" id="startIn" placeholder="01/08/1989">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputMonthlyRate">Monthly Rate</label>
-                <input type="role" class="form-control" id="exampleInputMonthlyRate" placeholder="200000">
+                <input type="role" class="form-control" id="rateIn" placeholder="200000">
             </div>
             
-            <button type="submit" id="submitEmployee" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" id='submit' style='text-align:"right"'>Submit</button>
           </form>
-
+      </div>
 
     </div>
       <script src="logic.js"></script>
