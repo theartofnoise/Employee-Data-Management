@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timesheet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script
+
+
+    
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class='container' style='width:"80%" ; margin:"auto" '>
+        
+        <div class="container" style='background-color: black; border-radius: 5px; padding: 15px 25px 15px 25px'>
+            <h3 class="display-4" style='color:white'>Employee Data Management</h3>
+            <p class="lead" style='color:white'>A Comprehensive Directory of Employee Billable Hours</p>
+        </div>
+        
+        <div class="card" style="width: 100%; margin: 15px 0px;">
+          <div class="card-header">
+            Current Employees
+          </div>
+          <table class="table">
+          
+            <tbody id="topRow">
+          
+              <tr>
+                <th scope="col"><b>#</b></th>
+                <th scope="col"><b>Employee Name</b></th>
+                <th scope="col"><b>Role</b></th>
+                <th scope="col"><b>Start Date</b></th>
+                <th scope="col"><b>Months Worked</b></th>
+                <th scope="col"><b>Monthly Rate ($)</b></th>
+                <th scope="col"><b>Total Billed ($)</b></th>
+              </tr>
+          
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+          
+            </tbody>
+          </table>          
+        </div>
+
+
+    
+      <form>
+            <div class="form-group">
+              <label for="employeeName">Employee Name</label>
+              <input type="name" class="form-control" id="exampleName" aria-describedby="nameHelp" placeholder="Jane Doe">
+            </div>
+
+            <div class="form-group">
+              <label for="exampleInputRole">Role</label>
+              <input type="role" class="form-control" id="exampleInputRole" placeholder="CEO">
+            </div>
+            
+            <div class="form-group">
+                <label for="exampleInputStartDate">Start Date (MM/DD/YYYY)</label>
+                <input type="role" class="form-control" id="exampleInputStartDate" placeholder="01/08/1989">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputMonthlyRate">Monthly Rate</label>
+                <input type="role" class="form-control" id="exampleInputMonthlyRate" placeholder="200000">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+
+    </div>
+      <script src="logic.js"></script>
+</body>
+</html>
