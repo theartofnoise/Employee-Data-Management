@@ -63,12 +63,10 @@ $(document).ready(function () {
     }, function (errorObject) {
         console.log('Error: ' + errorObject);
     });
+    
+      function dateConvert(startDate){
+        var array = startDate.split('/');
+       return new Date(array[2], array[1]-1, array[0]);
+    
+      }    
 });
-
-
-  function dateConvert(startDate){
-    var array = startDate.split('/');
-   return new Date(array[2], array[1]-1, array[0]);
-
-  }
- 
